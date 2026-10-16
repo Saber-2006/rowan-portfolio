@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/*
+  Design tokens. Tailwind v4 turns every --color-* variable into utility classes,
+  so `--color-accent` gives you bg-accent, text-accent, border-accent, ring-accent,
+  shadow-accent/25 and so on. Change a colour here and the whole site updates.
+*/
+@theme {
+  /* Fonts: `font-sans` is applied to the whole page by default,
+     `font-display` is the serif used for headings. */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+
+  /* Colours */
+  --color-ink: #111111;        /* main text */
+  --color-night: #0a0a0a;      /* dark buttons + case study section */
+  --color-paper: #fafafa;      /* page background */
+  --color-accent: #ff5c8a;     /* hot pink highlights */
+  --color-blush: #ffd1dc;      /* soft pink surfaces */
+  --color-blush-soft: #ffe4ea; /* lighter pink, used in gradients */
+  --color-petal: #f4c2c2;      /* pink borders + shadows */
+
+  /* Animations. Each --animate-* variable becomes an `animate-*` class. */
+  --animate-marquee: marquee 28s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.5s ease;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-14px); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: none; }
+  }
+}
+
+/* Smooth scrolling for the nav links, but only for people who haven't asked their
+   system to reduce motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* The navbar is fixed to the top, so leave room when jumping to a section
+   (otherwise the section heading would hide underneath it). */
+section[id] { scroll-margin-top: 4rem; }
