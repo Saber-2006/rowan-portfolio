@@ -2,9 +2,9 @@
 // Edit the values here and every component that uses them updates automatically.
 
 export const CONTACT = {
-  email: "hello@yourdomain.com",       // TODO: your real email
-  instagram: "https://instagram.com/", // TODO: your Instagram profile URL
-  linkedin: "https://linkedin.com/in/", // TODO: your LinkedIn profile URL
+  email: "rewaansaaber96@gmail.com ",       
+  instagram: "https://www.instagram.com/rowansaaber?obrf=N3VmMDlxeW9mcDFq", 
+  linkedin: "https://www.linkedin.com/in/rewan-saber-dm", 
 };
 
 // `href` values must match the `id` of a <section> on the page.

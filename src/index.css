@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Pinyon+Script&display=swap');
 @import "tailwindcss";
 
 /*
@@ -6,37 +8,106 @@
   shadow-accent/25 and so on. Change a colour here and the whole site updates.
 */
 @theme {
-  /* Fonts: `font-sans` is applied to the whole page by default,
-     `font-display` is the serif used for headings. */
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-display: "Playfair Display", Georgia, serif;
+  /* Fonts */
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Instrument Serif", serif;
+  --font-accent: "Pinyon Script",cursive;
+  --font-anton: "Anton", sans-serif;
+    --font-script: "Pinyon Script", cursive;
+  --font-instrument: "Instrument Serif", "Times New Roman", serif;
+
 
   /* Colours */
-  --color-ink: #111111;        /* main text */
-  --color-night: #0a0a0a;      /* dark buttons + case study section */
-  --color-paper: #fafafa;      /* page background */
-  --color-accent: #ff5c8a;     /* hot pink highlights */
-  --color-blush: #ffd1dc;      /* soft pink surfaces */
-  --color-blush-soft: #ffe4ea; /* lighter pink, used in gradients */
-  --color-petal: #f4c2c2;      /* pink borders + shadows */
+  --color-cream: #F4F1EA;
+  --color-paper: #FBFAF7;
+  --color-ink: #0A0A0A;
+  --color-pink: #F4A3C6;
+  --color-blush: #FFD1DC;
+  --color-hot-pink: #E8619A;
+  --color-light-pink: #FFE6EF;
 
-  /* Animations. Each --animate-* variable becomes an `animate-*` class. */
+  /* Existing colors */
+  --color-night: #0a0a0a;
+  --color-accent: #ff5c8a;
+  --color-blush-soft: #ffe4ea;
+  --color-petal: #f4c2c2;
+
+  /* Animations */
   --animate-marquee: marquee 28s linear infinite;
   --animate-float: float 7s ease-in-out infinite;
   --animate-fade-in: fade-in 0.5s ease;
 
   @keyframes marquee {
     from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    to { transform: translateX(-50%); }
   }
+
   @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-14px); }
+    50% { transform: translateY(-14px); }
   }
+
   @keyframes fade-in {
     from { opacity: 0; transform: translateY(8px); }
-    to   { opacity: 1; transform: none; }
+    to { opacity: 1; transform: none; }
   }
+}
+/* Slow sway: the pill stays tilted to one side and gently rocks around that tilt. */
+@keyframes tilt-wiggle {
+  0%, 100% { transform: rotate(-6deg); }
+  25%      { transform: rotate(-9deg); }
+  75%      { transform: rotate(-3deg); }
+}
+
+.tilt-wiggle {
+  animation: tilt-wiggle 3.5s ease-in-out infinite;
+}
+
+/* For people who set "reduce motion" in their system: keep the tilt, stop the movement. */
+@media (prefers-reduced-motion: reduce) {
+  .tilt-wiggle {
+    animation: none;
+    transform: rotate(-6deg);
+  }
+}
+
+/* Default body font */
+body {
+  font-family: var(--font-sans);
+}
+
+/* All headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+/* Script accent words */
+.font-accent {
+  font-family: var(--font-accent);
+  color: #F4A3C6;
+  -webkit-text-stroke: 0.8px black;
+  paint-order: stroke fill;
+}
+.font-BlackAccent {
+  font-family: var(--font-accent);
+  color: #0A0A0A;
+  -webkit-text-stroke: 0.8px black;
+  paint-order: stroke fill;
+}
+/* Anton display text */
+.font-anton {
+  font-family: var(--font-anton);
+  text-transform: uppercase;
+}
+
+/* Small uppercase labels */
+.label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
 }
 
 /* Smooth scrolling for the nav links, but only for people who haven't asked their

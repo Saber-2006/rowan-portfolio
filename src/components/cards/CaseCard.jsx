@@ -1,8 +1,13 @@
+import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
 /**
  * One case study card: image on top, then headline, summary, tags and 3 results.
  * It only receives data and renders it, so it has no state of its own.
+ *
+ * The "Read the full case study" link opens /case-studies/<id>. The id comes from
+ * the case's `id` in data/cases.js, so adding a case there is all it takes.
+ * <Link> (instead of <a>) changes the page without reloading the whole site.
  *
  * Image notes:
  *   loading="lazy"   the browser only downloads the image when it is near the screen
@@ -11,7 +16,7 @@ import { ArrowUpRight } from "lucide-react";
  *                    the image arrives (this is what Google calls layout shift)
  */
 export default function CaseCard({ study }) {
-  const { client, category, headline, summary, strategy, results, image } = study;
+  const { id, client, category, headline, summary, strategy, results, image } = study;
 
   return (
     <article className="group h-full overflow-hidden rounded-[2rem] bg-white/[0.04] ring-1 ring-white/10 transition hover:-translate-y-1 hover:ring-blush/60">
@@ -57,10 +62,13 @@ export default function CaseCard({ study }) {
           ))}
         </div>
 
-        {/* TODO: point this at the full case study page when you have one */}
-        <a href="#" className="mt-6 inline-flex items-center gap-1 text-sm text-white/80 transition hover:text-blush">
+        {/* Opens the full case study page */}
+        <Link
+          to={`/case-studies/${id}`}
+          className="mt-6 inline-flex items-center gap-1 text-sm text-white/80 transition hover:text-blush"
+        >
           Read the full case study <ArrowUpRight size={15} />
-        </a>
+        </Link>
       </div>
     </article>
   );

@@ -43,8 +43,9 @@ export default function Hero() {
 
         <Reveal delay={200}>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-black/60 md:text-xl">
-            Founder & CEO of a Dubai digital marketing agency. For 7+ years I've taken brands from first idea to full
-            calendars across the UAE, the GCC and Egypt: strategy, identity, campaigns and the systems behind them.
+            I'm Rowan, a digital marketing and brand strategist. 
+            I build the brand, run the campaigns and track every number, 
+            so your business gets closer to its goals, across the UAE, the GCC and Egypt.igns and the systems behind them.
           </p>
         </Reveal>
 
@@ -52,16 +53,17 @@ export default function Hero() {
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <a
               href="#work"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-night px-7 py-4 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent/25"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-hot-pink px-7 py-4 text-sm font-medium text-white transition hover:bg-night hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent/25"
             >
               Explore case studies
               <ArrowRight size={16} className="transition group-hover:translate-x-1" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-black/10 bg-white/70 px-7 py-4 text-sm font-medium backdrop-blur transition hover:-translate-y-0.5 hover:border-accent hover:bg-blush/40"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-black/10 bg-white/70 px-7 py-4 text-sm font-medium backdrop-blur transition hover:-translate-y-0.5 hover:border-accent hover:bg-pink"
             >
-              Let's connect
+              Let's connect 
+              <ArrowRight size={16} className="transition group-hover:translate-x-1" />
             </a>
           </div>
         </Reveal>

@@ -19,9 +19,10 @@ export default function About() {
             {/* TODO: replace this gradient box with your portrait, e.g.
                 <img src="/portrait.jpg" alt="Rowan Saber" width={800} height={1000} className="h-full w-full object-cover" />
                 (put portrait.jpg in the /public folder) */}
+
             <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-linear-to-br from-blush to-petal shadow-xl shadow-petal/40">
+              <img src="src/assets/images/ChatGPT Image Oct 13, 2026, 06_03_28 PM-4.png" alt="Rowan Saber" width={800} height={1000} className="h-full w-full object-cover" />
               <div className="flex h-full items-end p-8">
-                <span className="text-sm text-black/50">Your portrait here</span>
               </div>
             </div>
 
@@ -36,22 +37,23 @@ export default function About() {
         {/* Text column (7 of 12) */}
         <div className="md:col-span-7">
           <Reveal>
-            <SectionLabel>Who I am</SectionLabel>
+            {/* <SectionLabel>Who I am</SectionLabel> */}
             <h2 className="mt-6 font-display text-4xl leading-tight tracking-tight md:text-5xl">
-              Part strategist, part creative director, part systems builder.
+              Helping your brand get closer to its <span className="text-accent">goals</span>—
             </h2>
           </Reveal>
 
           <Reveal delay={100}>
             <div className="mt-6 space-y-5 text-lg leading-relaxed text-black/65">
               <p>
-                I'm Rowan, an Egyptian marketer based in Dubai. I started in performance marketing, then built my own
-                agency to give founders what I always wanted for my own clients: one partner who understands the brand,
-                the numbers and the operations behind them.
+I started in performance marketing and grew into brand strategy,
+because the best results come from someone who understands the brand, 
+the numbers and the operations behind them.
               </p>
               <p>
-                Today I lead brand launches, paid social and CRM-driven lead generation for hospitality, F&B, creative
-                studios and B2B businesses, and I automate the workflows that keep it all running.
+                Today I lead brand launches, social media, paid campaigns and
+                CRM-driven lead generation for hospitality, F&B, creative studios and
+                B2B businesses, and I automate the workflows that keep it all running
               </p>
             </div>
           </Reveal>

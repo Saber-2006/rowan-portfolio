@@ -24,15 +24,16 @@ export default function Contact() {
 
       <div className="relative mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-2 md:px-8">
         <Reveal>
-          <SectionLabel>Let's connect</SectionLabel>
+          <div className="tilt-wiggle font-BlackAccent bg-pink text-xl rounded-full py-2 px-4 w-fit">
+  Let's talk
+</div>
           <h2 className="mt-6 font-display text-4xl leading-tight tracking-tight md:text-6xl">
-            Have a brand that deserves more attention?
+            Ready to be the brand people <span className="text-accent"> talk about?</span>
           </h2>
           <p className="mt-6 max-w-md text-lg text-black/60">
-            Tell me where you are and where you want to be. I reply within two working days.
-          </p>
+Tell me where you are and where you want to be. I reply within two working days.          </p>
 
-          <div className="mt-10 space-y-3">
+          <div className="mt-10 space-y-3 ">
             {LINKS.map(({ icon: Icon, label, href }) => (
               <a
                 key={label}
@@ -40,7 +41,7 @@ export default function Contact() {
                 // Only web links open in a new tab; mailto: links should not.
                 target={href.startsWith("http") ? "_blank" : undefined}
                 rel="noreferrer"
-                className="group flex items-center justify-between rounded-2xl border border-black/5 bg-white/70 px-5 py-4 backdrop-blur transition hover:border-petal hover:bg-white"
+                className="group flex items-center justify-between rounded-full border border-black/5 bg-white/70 px-5 py-4 backdrop-blur transition hover:border-petal hover:bg-pink"
               >
                 <span className="flex items-center gap-3">
                   <Icon size={18} /> {label}

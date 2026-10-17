@@ -27,6 +27,7 @@ export default function CaseStudies() {
             <h2 className="max-w-2xl font-display text-4xl leading-tight tracking-tight md:text-5xl">
               Case studies, with the numbers to back them.
             </h2>
+            
 
             {/* Filter buttons */}
             <div className="flex flex-wrap gap-2">
