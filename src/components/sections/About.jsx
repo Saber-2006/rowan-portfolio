@@ -1,5 +1,6 @@
 import Reveal from "../ui/Reveal";
 import SectionLabel from "../ui/SectionLabel";
+import portrait from "../../assets/images/portrait.png";
 
 // Defined OUTSIDE the component so the array is created once, not on every render.
 const VALUES = [
@@ -21,10 +22,16 @@ export default function About() {
                 (put portrait.jpg in the /public folder) */}
 
             <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-linear-to-br from-blush to-petal shadow-xl shadow-petal/40">
-              <img src="src/assets/images/ChatGPT Image Oct 13, 2026, 06_03_28 PM-4.png" alt="Rowan Saber" width={800} height={1000} className="h-full w-full object-cover" />
-              <div className="flex h-full items-end p-8">
-              </div>
-            </div>
+  <img
+    src={portrait}
+    alt="Rowan Saber"
+    width={800}
+    height={1000}
+    loading="lazy"
+    decoding="async"
+    className="h-full w-full object-cover"
+  />
+</div>
 
             {/* Floating role badge overlapping the corner */}
             <div className="absolute -bottom-6 -right-4 rounded-2xl border border-white/70 bg-white/80 px-5 py-4 shadow-lg backdrop-blur-md md:-right-8">
